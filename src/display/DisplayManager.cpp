@@ -978,6 +978,8 @@ void DisplayManager::prepareForSleep() {
 
   fillScreen(kTrueBlack);
   axs15231bSleep();
+  pinMode(BoardConfig::PIN_LCD_BACKLIGHT, OUTPUT);
+  digitalWrite(BoardConfig::PIN_LCD_BACKLIGHT, LOW);
   initialized_ = false;
   tickerPlaybackFrameActive_ = false;
   lastRenderKey_ = "";
@@ -993,6 +995,7 @@ bool DisplayManager::wakeFromSleep() {
   initialized_ = true;
   tickerPlaybackFrameActive_ = false;
   lastRenderKey_ = "";
+  pinMode(BoardConfig::PIN_LCD_BACKLIGHT, OUTPUT);
   applyBrightness();
   return true;
 }
