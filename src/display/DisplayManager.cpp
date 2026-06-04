@@ -978,6 +978,7 @@ void DisplayManager::prepareForSleep() {
 
   fillScreen(kTrueBlack);
   axs15231bSleep();
+  digitalWrite(BoardConfig::PIN_LCD_BACKLIGHT, LOW);
   initialized_ = false;
   tickerPlaybackFrameActive_ = false;
   lastRenderKey_ = "";
