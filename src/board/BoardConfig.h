@@ -22,7 +22,7 @@ constexpr int PIN_LCD_DATA1 = 12;
 constexpr int PIN_LCD_DATA2 = 13;
 constexpr int PIN_LCD_DATA3 = 14;
 constexpr int PIN_LCD_RST = 21;
-constexpr int PIN_LCD_BACKLIGHT = 8;
+constexpr int PIN_LCD_BACKLIGHT = 42;
 
 constexpr int PANEL_NATIVE_WIDTH = 172;
 constexpr int PANEL_NATIVE_HEIGHT = 640;
